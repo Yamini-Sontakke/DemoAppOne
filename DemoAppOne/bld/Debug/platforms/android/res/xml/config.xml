@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.DemoAppOne" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps">
+    <preference name="loglevel" value="DEBUG" />
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+    </feature>
+    <name>DemoAppOne</name>
+    <description>A blank project that uses Apache Cordova to help you build an app that targets multiple mobile platforms: Android, iOS, Windows, and Windows Phone.</description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">Apache Cordova Team </author>
+    <content src="index.html" />
+    <access origin="http://dev.virtualearth.net" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="windows-target-version" value="8.0" />
+    <preference name="windows-phone-target-version" value="8.1" />
+    <vs:plugin name="org.apache.cordova.console" version="0.2.11" />
+    <vs:plugin name="org.apache.cordova.device" version="0.2.12" />
+    <vs:plugin name="org.apache.cordova.camera" version="0.3.2" />
+    <vs:plugin name="org.apache.cordova.file" version="1.3.1" />
+    <vs:plugin name="org.apache.cordova.geolocation" version="0.3.10" />
+    <vs:plugin name="org.apache.cordova.splashscreen" version="0.3.3" />
+    <vs:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
+    <vs:platformSpecificValues />
+</widget>

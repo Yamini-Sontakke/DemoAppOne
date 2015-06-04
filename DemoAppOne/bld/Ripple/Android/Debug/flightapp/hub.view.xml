@@ -1,0 +1,56 @@
+﻿<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" height="100%"
+		controllerName="flightapp.hub" xmlns:html="http://www.w3.org/1999/xhtml"
+		xmlns:l="sap.ui.layout">
+  <VBox>
+    <Carousel>
+      <pages>
+        <List id="airlines" headerText="Airlines" items="{/}">
+          <items>
+            <StandardListItem
+            title="{carrid}"
+            description="{CARRNAME}"
+            icon="sap-icon://flight"
+            type="Navigation"
+            press="getFlights"/>
+          </items>
+        </List>
+
+        <VBox>
+          <html:div id="photo">
+            <html:div id="photoSection" class="mainChild subsection">
+              <html:h3 id="photoHeading" class="section-title"></html:h3>
+              <Image id="photoImg" src="#"/>
+            </html:div>
+          </html:div>
+          <FlexBox alignItems="Center" justifyContent="Center">
+            <items>
+              <Button id="pictureBtn" text="Take a Picture"/>
+            </items>
+          </FlexBox>
+
+        </VBox>
+
+
+        <VBox>
+          <html:div id="locationSection" class="mainChild subsection">
+
+            <html:div id="locationControls">
+              <html:div>
+                <html:input id="txtLocation" type="text"></html:input>
+              </html:div>
+              <!--<html:div>
+                <html:button id="btnLocate" class="iconGlobe">locate</html:button>
+
+              </html:div>-->
+            </html:div>
+            <html:div id="mapDiv" style="position:relative;width:280px;height:400px;"></html:div>
+          </html:div>
+        </VBox>
+
+
+      </pages>
+    </Carousel>
+  </VBox>
+
+
+</core:View>

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+
+    <title>DemoAppOne</title>
+
+    
+
+    <!-- DemoAppOne references -->
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/frameworks/ui-dark.css" rel="stylesheet" />
+
+    <script src="scripts/frameworks/base.js"></script>
+    <script src="scripts/frameworks/ui.js"></script>
+    <script src="scripts/frameworks/winjs.js"></script>
+    <!--<script src="scripts/share.js"></script>-->
+
+    <script src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+            id="sap-ui-bootstrap"
+            data-sap-ui-libs="sap.m"
+            data-sap-ui-theme="sap_bluecrystal"
+            data-sap-ui-resourceroots='{ 
+					"com.app":"./",
+					"flightapp":"./flightapp"}'>
+    </script>
+    <!-- only load the mobile lib "sap.m" and the "sap_mvi" theme -->
+    
+    
+   
+</head>
+<body class="sapUIBody" style="overflow:hidden" role="application">
+    <script>
+        sap.ui.localResources("flightapp");
+    var serviceUrl = "https://sapes1.sapdevcenter.com/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT";
+
+    var oModel = new sap.ui.model.odata.ODataModel(serviceUrl, false, "p1794163851", "Anjali1#", null, null, null, false);
+    sap.ui.getCore().setModel(oModel);
+
+    new sap.m.Shell("Shell", {
+        title: "flightapp",
+        app: new sap.ui.core.ComponentContainer({
+            name: 'com.app'
+        })
+    }).placeAt("content");
+
+
+
+    </script>
+
+    <div id="content"></div>
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="flight/views/mapcontrol.ashx"></script> 
+    <script src="scripts/platformOverrides.js"></script>
+    <script src="scripts/index.js"></script>
+    
+</body>
+</html>

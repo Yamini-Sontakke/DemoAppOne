@@ -1,0 +1,16 @@
+﻿<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="flightapp.details" xmlns:html="http://www.w3.org/1999/xhtml">
+
+  <List
+    id="formDetails" items="{/}" >
+
+    <items>
+      <DisplayListItem
+      label="city"
+      value="{cityTo}"
+      type="Navigation"
+       />
+    </items>
+  </List>
+
+</core:View>

@@ -1,0 +1,28 @@
+﻿<template data-controller-name="flightapp.hub">
+    <div data-sap-ui-type="sap.m.Page" data-title="Title">
+        <div data-sap-ui-aggregation="content">
+            
+            <div data-sap-ui-type="sap.m.List" id="airlines" data-items="{/}">
+                <div data-sap-ui-aggregation="items">
+                    <div data-sap-ui-type="sap.m.StandardListItem" data-type="Navigation" data-title="{carrid}" data-icon="sap-icon://flight"
+                         data-description="{CARRNAME}">
+                    </div>
+                </div>
+            </div>
+            s            
+        </div>
+        <div data-sap-ui-aggregation="customHeader">
+            <div data-sap-ui-type="sap.m.Bar">
+                <div data-sap-ui-aggregation="contentLeft">
+                    <div data-sap-ui-type="sap.m.Button" data-text="back" data-press="goBack"></div>
+                </div>
+                <div data-sap-ui-aggregation="contentMiddle">
+                    <div data-sap-ui-type="sap.m.Label" data-text="Airline"></div>
+                </div>
+            </div>
+        </div>
+        <div data-sap-ui-aggregation="footer">
+           
+        </div>
+    </div>
+</template>

@@ -1,0 +1,14 @@
+﻿<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" height="100%"
+controllerName="flightapp.airlines" xmlns:html="http://www.w3.org/1999/xhtml"
+xmlns:l="sap.ui.layout">
+  <List id="airlines" items="airlines>/">
+    <items>
+      <StandardListItem
+      title="{carrid}"
+      description="{CARRNAME}"
+      icon="sap-icon://flight"
+      type="Navigation"
+      press="handleme"/>
+    </items>
+  </List>
+</core:View>

@@ -1,0 +1,23 @@
+﻿<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="flightapp.flights" xmlns:html="http://www.w3.org/1999/xhtml">
+  
+    <List
+      id="flights" growing="true" growingThreshold="10" growingScrollToLoad="true" items="{/}" >
+
+      <items>
+        <StandardListItem
+        title="{flightDetails/cityFrom}"
+        description="{flightDetails/cityTo}"
+        type="Navigation"
+        press="getDetails" />
+      </items>
+      <headerToolbar>
+        <Toolbar>
+          <Button
+           type="Back" />
+          <Label text="Flights"/>
+        </Toolbar>
+      </headerToolbar>
+    </List>
+  
+</core:View>
